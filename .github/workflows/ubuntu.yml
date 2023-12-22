@@ -14,10 +14,6 @@ jobs:
     - name: install
       run: |
         sudo apt-get install gcovr lcov
-    - name: prepare
-      run:
-        make prepare
-    - name: configure
       run: |
         cmake --build build --config Debug --target coverage -j4
     - name: testing
